@@ -1,0 +1,21 @@
+/* Estilo para el título de la página de pago */
+#pago h2 {
+    font-size: 28px;
+    color: #5a2c2c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Estilos generales para el formulario */
+  #pago {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+  }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet & Coffee</title>
+  <link rel="stylesheet" href="estilos/estilos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- MODAL DE LOGIN -->
+  <div id="modalLogin" class="modal">
+    <div class="modal-contenido">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="usuario" placeholder="Usuario"><br>
+      <input type="password" id="contrasena" placeholder="Contraseña"><br>
+      <button onclick="iniciarSesion()">Ingresar</button>
+      <p id="mensajeError" style="color: red;"></p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO DE LA PÁGINA -->
+  <div id="contenidoPagina">
+    <header>
+      <!-- Enlaces superiores -->
+      <div id="linksContainer">
+        <div id="enlaces">
+          <a href="">Factura electrónica</a>
+          <a href="">Nutricional</a>
+          <a href="">Pet Lovers</a>
+          <a href="">Nuestro Café</a>
+          <a href="">Política de privacidad</a>
+          <a href="">Términos y condiciones</a>
+        </div>
+        <div id="redes">
+          <a href=""><img class="imgLink" src="img/SC-TWITTER.png" alt="x"></a>
+          <a href=""><img class="imgLink" src="img/SC-FACEBOOK.png" alt="facebook"></a>
+          <a href=""><img class="imgLink" src="img/SC-INSTAGRAM.png" alt="instagram"></a>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <nav>
+        <a href=""><img src="img/SC-LOGO-HORIZONTAL.png" alt=""></a>
+        <div id="navLinks">
+          <a href="">NOSOTROS</a>
+          <a href="">PROCESOS</a>
+          <a href="">MENÚ</a>
+          <a href="">LOCALES</a>
+          <a href="">COMPROMISO</a>
+          <a href="">TALENTO</a>
+
+          <a href="pago.html" target="_blank">PAGO EN LINEA</a>
+          <a href="javascript:void(0);" onclick="abrirModal()">INICIAR SESIÓN</a>
+        </div>
+      </nav>
+
+      <!-- Carrusel -->
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/KV-DMadre25-Web-Banner-V1-1536x736.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Galatea-Web-Banner-min-1536x736.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Kandu-2023-Web-Banner-min-1536x736.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Frappelatte-Cafe-Intenso-SweetCoffee-banner-1536x736.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/BANNER-BROWNIE-COFFEE-SUNDAE-1536x736.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Aquí puedes continuar con tus secciones como estaban -->
+      <section id="banner">
+        <a href="https://linktr.ee/sweetandcoffee" target="_blank">
+          <img class="imgBanner" src="img/banner-web-home-1536x179.png" alt="">
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <img class="footer" src="img/FinFooternew.jpg" alt="">
+    </footer>
+  </div>
+
+  <!-- SCRIPT DE LOGIN -->
+  <script>
+    function iniciarSesion() {
+      const user = document.getElementById('usuario').value;
+      const pass = document.getElementById('contrasena').value;
+      const mensajeError = document.getElementById('mensajeError');
+
+      if (user === 'admin' && pass === '1234') {
+        document.getElementById('modalLogin').style.display = 'none';
+      } else {
+        mensajeError.textContent = "Usuario o contraseña incorrectos";
+      }
+    }
+
+    function abrirModal() {
+      document.getElementById('modalLogin').style.display = 'flex';
+    }
+  </script>
+
+</body>
+
+</html>
